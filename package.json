@@ -1,0 +1,32 @@
+{
+  "name": "static-site-webpack-habr",
+  "version": "2.0.0",
+  "description": "HTML template",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --no-client-overlay-warnings",
+    "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "prettier": "^3.3.2",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
