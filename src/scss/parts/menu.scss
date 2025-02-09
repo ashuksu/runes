@@ -90,7 +90,8 @@
     top: 100%;
     right: -400px;
     transition: .6s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    z-index: 10;
 
     &.open {
       right: 0;
