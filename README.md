@@ -1,6 +1,6 @@
 
 ## Site Preview
-### [GitHub Pages](https://ashuksu.github.io/landingpage/public/)
+### [GitHub Pages](https://ashuksu.github.io/runes/public/)
 
 
 ## Usage
