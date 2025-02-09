@@ -1,3 +1,9 @@
+
+## Site Preview
+### [GitHub Pages](https://ashuksu.github.io/landingpage/public/)
+
+---
+
 ## Usage
 
 * `npm i` --- install node_modules
@@ -10,6 +16,8 @@
 
 * `npm run start` --- start local server, which will run HTML page and will also track changes in files.
 
+---
+
 ## Git
 
 #### Flow
@@ -21,6 +29,8 @@ The main model is - [Branching model](https://nvie.com/posts/a-successful-git-br
 * `main` - `production` environment code branch
 
 * `develop` - the main branch where all `feature/<issue-key>` branches are uploaded, for example `feature/CODE-123`, a development branch
+
+---
 
 ## Build
 
