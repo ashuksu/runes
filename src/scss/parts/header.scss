@@ -5,8 +5,8 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 
   &__inner {
     @extend %flex-s;
