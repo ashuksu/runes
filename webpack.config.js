@@ -16,7 +16,8 @@ function generateHtmlPlugins(templateDir) {
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-      inject: false,
+      inject: 'body',
+      scriptLoading: 'blocking',
     });
   });
 }
@@ -26,8 +27,9 @@ const htmlPlugins = generateHtmlPlugins("src/html/views");
 const config = {
   entry: ["./src/js/index.js", "./src/scss/style.scss"],
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "js/bundle.js",
+    path: path.resolve(__dirname, "public"),
+    filename: "js/bundle.[contenthash].js",
+    clean: true,
   },
   devtool: "source-map",
   mode: "production",
@@ -53,7 +55,10 @@ const config = {
     rules: [
       {
         test: /\.(sass|scss)$/,
-        include: path.resolve(__dirname, "src/scss"),
+        include: [
+          path.resolve(__dirname, "src/scss"),
+          path.resolve(__dirname, '../node_modules'),
+        ],
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -64,6 +69,17 @@ const config = {
             options: {
               sourceMap: true,
               url: false,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('autoprefixer')({
+                  browsers: ['> 1%', 'last 2 versions'],
+                }),
+              ],
             },
           },
           {
@@ -80,11 +96,16 @@ const config = {
         include: path.resolve(__dirname, "src/html/includes"),
         use: ["raw-loader"],
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/style.bundle.css",
+      filename: "css/style.bundle.[contenthash].css",
     }),
     new CopyPlugin({
       patterns: [

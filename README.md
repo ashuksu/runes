@@ -1,22 +1,35 @@
-# static-site-webpack-habr
+## Usage
 
-![Webpack](https://raw.githubusercontent.com/Harrix/static-site-webpack-habr/master/img/featured-image.png)
+* `npm i` --- install node_modules
 
-Демонстрация сборки HTML страниц (или статического сайта) с помощью `Webpack`.
+* `npm run dev` --- build project (CSS and HTML files will also be built by this command), and bundle.js and bundle.js.map files will appear in the /public/js folder.
 
-Статья (в ней прописан устаревший [вариант](https://github.com/Harrix/static-site-webpack-habr/releases/tag/v1.0)) [https://habr.com/ru/articles/350886/](https://habr.com/post/350886/).
+* `npm run build` --- build project, but final (with optimization, maximum file minification), which can be uploaded to hosting.
 
-Новая статьи: [article.md](https://github.com/Harrix/static-site-webpack-habr/blob/master/docs/article.md) (в процессе долгого написания).
+* `npm run watch` --- automatic viewing mode for changes in project files with automatic build of changed files.
 
-Лицензия: [MIT](https://github.com/Harrix/static-site-webpack-habr/blob/master/LICENSE.md).
+* `npm run start` --- start local server, which will run HTML page and will also track changes in files.
 
-## Использование
+## Git
 
-1. Установите программу [Node.js](https://nodejs.org/en/).
-2. Создайте директорию (например, 'C:\projects\test'), в которой будете создавать своей проект.
-3. В командной строке (например, 'cmd' или 'PowerShell') перейдите в эту папку.
-4. Скопируйте в папку файлы из данного проекта.
+#### Flow
 
-## Автор
+The main model is - [Branching model](https://nvie.com/posts/a-successful-git-branching-model)
 
-Автор: Сергиенко Антон Борисович.
+#### Branching
+
+* `main` - `production` environment code branch
+
+* `develop` - the main branch where all `feature/<issue-key>` branches are uploaded, for example `feature/CODE-123`, a development branch
+
+## Build
+
+#### Source
+
+A simple static site on Webpack 4 ( [github link](https://github.com/Harrix/static-site-webpack-habr) )
+
+#### Minimum versions of node, npm
+
+* `node -v` v17.4.0
+
+* `npm -v` 8.4.1

@@ -1,0 +1,33 @@
+//@extend %flex-v;
+
+%flex-v {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+%flex-s {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-c {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+%bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+%bg-contain {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}

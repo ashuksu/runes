@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="<%=url_home%>" class="logo">
+                <img src="img/logo-1.png" alt="<%=site%>" width="28" height="28">
+            </a>
 
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="stylesheet" href="css/style.bundle.css" />
+            <div class="menu" data-menu="opener">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <title><%=title%></title>
-  </head>
-  <body>
-    <header><img src="img/logo.svg" id="logo" /></header>
+            <nav class="nav" data-menu="container">
+                <a data-menu="link" href="#section-1" class="nav__link">Section 1</a>
+                <a data-menu="link" href="#section-2" class="nav__link">Section 2</a>
+                <a data-menu="link" href="#slider" class="nav__link">Slider</a>
+                <a data-menu="link" href="#contacts" class="nav__link">Contacts</a>
+            </nav>
+        </div>
+    </div>
+</header>

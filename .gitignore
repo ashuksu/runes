@@ -36,6 +36,8 @@ build/Release
 node_modules/
 jspm_packages/
 
+.idea/
+
 # Typescript v1 declaration files
 typings/
 
@@ -57,5 +59,4 @@ typings/
 # dotenv environment variables file
 .env
 
-# idea phpStorm files
-.idea
+package-lock.json

@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  @include f400;
+  font-size: 16px;
+  line-height: 130%;
+  color: $color-dark;
+  background-color: $color-gray;
+
+  @include response-min(768px) {
+    font-size: 18px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-dark;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

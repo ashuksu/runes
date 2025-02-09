@@ -6,27 +6,36 @@
   "scripts": {
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch",
-    "start": "webpack serve --no-client-overlay-warnings",
-    "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
+    "start": "webpack serve --no-client-overlay-warnings --open",
+    "build": "webpack --mode production && prettier --print-width=120 --parser html --write public/*.html"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3"
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.1.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^9.5.0",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^12.0.2",
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.0",
-    "html-webpack-plugin": "^5.6.0",
-    "mini-css-extract-plugin": "^2.9.0",
-    "prettier": "^3.3.2",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "html-webpack-plugin": "^5.5.0",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "normalize.css": "^8.0.1",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.6.2",
     "raw-loader": "^4.0.2",
-    "sass": "^1.77.6",
-    "sass-loader": "^14.2.1",
-    "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "sass": "^1.50.1",
+    "sass-loader": "^12.6.0",
+    "slick-carousel": "^1.8.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   }
 }

@@ -1,0 +1,112 @@
+.menu {
+  @extend %flex-c;
+  flex-direction: column;
+  width: 20px;
+  height: 20px;
+  gap: 4px;
+  cursor: pointer;
+  position: relative;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-dark;
+  }
+
+  &.active {
+    gap: 0;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: .3s ease-in-out;
+    }
+
+    span:nth-child(1) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      display: none;
+    }
+
+    span:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  @include response-min(768px) {
+    display: none;
+  }
+}
+
+.nav {
+  @extend %flex-v;
+  gap: 40px;
+
+  &__link {
+    text-align: center;
+    line-height: 130%;
+    color: #2F3C4B;
+    transition: .3s ease-in-out;
+    position: relative;
+
+    &.active {
+      color: $color-blue;
+
+      @include response-min(768px) {
+        &:after {
+          content: "";
+          display: block;
+          width: 48px;
+          height: 2px;
+          background-color: $color-blue;
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    @include hover() {
+      color: rgba(#2F3C4B, .6);
+
+      &.active {
+        color: $color-blue;
+      }
+    }
+  }
+
+  @include response(767px) {
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 24px;
+    gap: 24px;
+    position: absolute;
+    top: 100%;
+    right: -400px;
+    transition: .6s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+
+    &.open {
+      right: 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 10px;
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+    }
+  }
+}
+

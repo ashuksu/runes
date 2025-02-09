@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Stolzl-Regular";
+  src: url("../fonts/Stolzl-Regular.woff2") format("woff2"),
+    url("../fonts/Stolzl-Regular.woff") format("woff"),
+    url("../fonts/Stolzl-Regular.woff") format("ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl-Book";
+  src: url("../fonts/Stolzl-Book.woff2") format("woff2"),
+    url("../fonts/Stolzl-Book.woff") format("woff"),
+    url("../fonts/Stolzl-Book.woff") format("ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl-Medium";
+  src: url("../fonts/Stolzl-Medium.woff2") format("woff2"),
+  url("../fonts/Stolzl-Medium.woff") format("ttf"),
+  url("../fonts/Stolzl-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl-Bold";
+  src: url("../fonts/Stolzl-Bold.woff2") format("woff2"),
+    url("../fonts/Stolzl-Bold.woff") format("ttf"),
+    url("../fonts/Stolzl-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
