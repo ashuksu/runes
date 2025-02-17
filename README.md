@@ -1,6 +1,11 @@
 
-## Site Preview
-### [GitHub Pages](https://ashuksu.github.io/runes/public/)
+# [RUNES](https://ashuksu.github.io/runes/public)
+
+<details>
+  <summary>Click, to show Preview</summary>
+
+  ![RUNES](https://raw.githubusercontent.com/ashuksu/runes/refs/heads/main/runes-preview.jpg)
+</details>
 
 
 ## Usage
